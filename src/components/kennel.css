@@ -1,0 +1,6 @@
+.kennel {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
