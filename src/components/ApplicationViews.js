@@ -27,10 +27,30 @@ class ApplicationViews extends Component {
     { id: 6, name: "Checkers" }
   ]
 
+  ownersFromAPI = [
+    { id: 1, name: "Ryan Tanay" },
+    { id: 2, name: "Emma Beaton" },
+    { id: 3, name: "Dani Adkins" },
+    { id: 4, name: "Adam Oswalt" },
+    { id: 5, name: "Fletcher Bangs" },
+    { id: 6, name: "Angela Lee" }
+  ]
+
+  animalOwnerRel = [
+    { id: 1, animalId: 1, ownerId: 1 },
+    { id: 2, animalId: 2, ownerId: 2 },
+    { id: 3, animalId: 3, ownerId: 3 },
+    { id: 4, animalId: 4, ownerId: 5 },
+    { id: 5, animalId: 5, ownerId: 5 },
+    { id: 6, animalId: 6, ownerId: 6 }
+  ]
+
   state = {
+    owners: this.ownersFromAPI,
     employees: this.employeesFromAPI,
     locations: this.locationsFromAPI,
-    animals: this.animalsFromAPI
+    animals: this.animalsFromAPI,
+    relationships: this.animalOwnerRel
   }
 
   render() {
@@ -40,7 +60,7 @@ class ApplicationViews extends Component {
           return <LocationList locations={this.state.locations} />
         }} />
         <Route path="/animals" render={(props) => {
-          return <AnimalList animals={this.state.animals} />
+          return <AnimalList animals={this.state.animals} owners={this.state.owners} relationships={this.state.relationships} />
         }} />
         <Route path="/employees" render={(props) => {
           return <EmployeeList employees={this.state.employees} />
