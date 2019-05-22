@@ -2,37 +2,98 @@
   "employees": [
     {
       "id": 1,
-      "name": "Jessica Younker"
-    },
-    {
-      "id": 2,
-      "name": "Jordan Nelson"
+      "name": "Jessica Younker",
+      "phoneNumber": "615-996-0985"
     },
     {
       "id": 3,
-      "name": "Zoe LeBlanc"
+      "name": "Zoe LeBlanc",
+      "phoneNumber": "615-996-0985"
     },
     {
       "id": 4,
-      "name": "Blaise Roberts"
+      "name": "Blaise Roberts",
+      "phoneNumber": "615-996-0985"
+    },
+    {
+      "id": 5,
+      "name": "Blaise Roberts",
+      "phoneNumber": "615-996-0985"
+    },
+    {
+      "id": 6,
+      "name": "Blaise Roberts",
+      "phoneNumber": "615-996-0985"
+    },
+    {
+      "id": 7,
+      "name": "Blaise Roberts",
+      "phoneNumber": "615-996-0985"
+    },
+    {
+      "id": 8,
+      "name": "Blaise Roberts",
+      "phoneNumber": "615-996-0985"
     }
   ],
   "animals": [
     {
       "id": 1,
-      "name": "Doug the Pug"
+      "name": "Doug the Pug",
+      "breed": "Pug",
+      "nickname": "The Dougie"
     },
     {
       "id": 2,
-      "name": "Stephen"
+      "name": "Stephen",
+      "breed": "Chihuahua",
+      "nickname": "honcho"
     },
     {
       "id": 3,
-      "name": "Charles Barkley"
+      "name": "Charles Barkley",
+      "breed": "Golden Retriever",
+      "nickname": "Scottie Pippen"
     },
     {
       "id": 4,
-      "name": "Bito"
+      "name": "Berto",
+      "breed": "The Best Pug",
+      "nickname": "Bito"
+    },
+    {
+      "id": 6,
+      "name": "Dave",
+      "breed": "Pitbull",
+      "nickname": "Baby Boy"
+    },
+    {
+      "name": "Bork",
+      "breed": "Floofer",
+      "employeeId": 3,
+      "nickname": "A boy",
+      "id": 9
+    },
+    {
+      "name": "Todd",
+      "breed": "Toad",
+      "employeeId": 1,
+      "nickname": "Todd the Toad",
+      "id": 10
+    },
+    {
+      "name": "John",
+      "breed": "Fish",
+      "employeeId": 3,
+      "nickname": "Fish",
+      "id": 11
+    },
+    {
+      "name": "Jon Snow",
+      "breed": "Wolf",
+      "employeeId": 4,
+      "nickname": "Ghost",
+      "id": 12
     }
   ],
   "owners": [
