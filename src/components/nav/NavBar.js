@@ -22,7 +22,6 @@ class NavBar extends Component {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/search">
-              return
             </Link>
           </li>
         </ul>
