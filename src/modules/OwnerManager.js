@@ -14,5 +14,14 @@ export default {
         'content-type': "application/json"
       }
     }).then(e => e.json())
+  },
+  addOwner(ownerObj) {
+    return fetch(`${remoteURL}/owners`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(ownerObj)
+    }).then(e => e.json())
   }
 }

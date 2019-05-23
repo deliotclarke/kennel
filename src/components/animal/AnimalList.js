@@ -14,13 +14,12 @@ export default class AnimalList extends Component {
             className="btn btn-success"
             onClick={() => {
               this.props.history.push("/animals/new")
-            }
-            }>Admit Animal</button>
+            }}>Admit Animal</button>
         </div>
         <h2>Animals:</h2>
         {
           this.props.animals.map((item) =>
-            <AnimalItem className="animalItem" key={item.id} animal={item} deleteAnimal={this.props.deleteAnimal} />
+            <AnimalItem className="animalItem" key={item.id} animal={item} {...this.props} deleteAnimal={this.props.deleteAnimal} />
           )
         }
       </section>

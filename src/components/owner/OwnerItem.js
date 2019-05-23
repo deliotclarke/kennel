@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import './owner.css'
 
 export default class OwnerItem extends Component {
 
   handleClick = (event) => {
-    console.log("owner click", this.props.owner.id, this.props.owner.name)
 
     this.props.ownerDelete(this.props.owner.id)
   }
 
   render() {
     return (
-      <div className="card">
+      <div className="card m-2 p-2">
         <h5>{this.props.owner.name}</h5>
         <p>Phone: {this.props.owner.phoneNumber}</p>
         <button className="ownerButton btn-danger" onClick={this.handleClick}>Remove</button>

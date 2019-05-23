@@ -25,11 +25,24 @@ export default class AnimalItem extends Component {
           <h5 className="card-title">
             <img src={DogIcon} alt="dog icon" className="icon--dog" />
             {this.props.animal.name}
+
+
             <button
+              //delete button
               onClick={this.handleClick}
               className="card-link btn-warning"
               disabled={this.state.saveDisabled}>Adopted</button>
-            <Link className="card-link" to={`/animals/${this.props.animal.id}`}>Details</Link></h5>
+            <Link className="card-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
+
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={() => {
+                this.props.history.push(`/animals/${this.props.animal.id}/edit`);
+              }}
+            >
+              Edit
+</button></h5>
         </div>
       </div>
     )

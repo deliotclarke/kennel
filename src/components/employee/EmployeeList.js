@@ -12,6 +12,15 @@ class EmployeeList extends Component {
   render() {
     return (
       <section className="employees">
+
+        <div className="employeeButton">
+          <button type="button" className="btn btn-success" onClick={() => {
+
+            this.props.history.push("/employees/new")
+
+          }}> New Employee</button>
+
+        </div>
         <h3>Employee List:</h3>
         <div className="d-flex flex-row flex-wrap mx-auto mt-4">
           {
