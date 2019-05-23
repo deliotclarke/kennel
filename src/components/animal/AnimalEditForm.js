@@ -1,45 +1,57 @@
-import React, { Component } from "react"
-import "./animal.css"
+import React, { Component } from 'react'
 
-export default class AnimalForm extends Component {
+import AnimalManager from "../../modules/AnimalManager"
+
+export default class AnimalEditForm extends Component {
   // Set initial state
   state = {
     animalName: "",
     breed: "",
-    employeeId: "",
-    nickname: ""
-  };
+    nickname: "",
+    employeeId: ""
+  }
 
-  // Update state whenever an input field is edited
+
   handleFieldChange = evt => {
-    const stateToChange = {};
-    stateToChange[evt.target.id] = evt.target.value;
-    this.setState(stateToChange);
-  };
+    const stateToChange = {}
+    stateToChange[evt.target.id] = evt.target.value
+    this.setState(stateToChange)
+  }
 
-  /*
-        Local method for validation, creating animal object, and
-        invoking the function reference passed from parent component
-     */
-  constructNewAnimal = evt => {
+  updateExistingAnimal = evt => {
 
     if (this.state.employee === "") {
       window.alert("Please select a caretaker");
     } else {
-      const animal = {
+      const editedAnimal = {
+        id: this.props.match.params.animalId,
         name: this.state.animalName,
         breed: this.state.breed,
-        // Make sure the employeeId is saved to the database as a number since it is a foreign key.
-        employeeId: parseInt(this.state.employeeId),
-        nickname: this.state.nickname
+        nickname: this.state.nickname,
+        employeeId: parseInt(this.state.employeeId)
       };
 
-      // Create the animal and redirect user to animal list
-      this.props.addAnimal(animal)
+      this.props.updateAnimal(editedAnimal)
     }
-  };
+  }
+
+  componentDidMount() {
+    AnimalManager.get(this.props.match.params.animalId)
+      .then(animal => {
+        this.setState({
+          animalName: animal.name,
+          breed: animal.breed,
+          nickname: animal.nickname,
+          employeeId: animal.employeeId
+        });
+      });
+  }
+
 
   render() {
+
+    console.log("you're doing it, peter!")
+
     return (
       <React.Fragment>
         <form className="animalForm">
@@ -51,7 +63,7 @@ export default class AnimalForm extends Component {
               className="form-control"
               onChange={this.handleFieldChange}
               id="animalName"
-              placeholder="Animal name"
+              value={this.state.animalName}
             />
           </div>
           <div className="form-group">
@@ -62,24 +74,27 @@ export default class AnimalForm extends Component {
               className="form-control"
               onChange={this.handleFieldChange}
               id="breed"
-              placeholder="Breed"
+              value={this.state.breed}
             />
           </div>
-          <input
-            type="text"
-            required
-            className="form-control"
-            onChange={this.handleFieldChange}
-            id="nickname"
-            placeholder="Nickname"
-          />
+          <div className="form-group">
+            <label htmlFor="nickname">Nickname</label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              onChange={this.handleFieldChange}
+              id="nickname"
+              value={this.state.nickname}
+            />
+          </div>
           <div className="form-group">
             <label htmlFor="employee">Assign to caretaker</label>
             <select
-              defaultValue=""
               name="employee"
               id="employeeId"
               onChange={this.handleFieldChange}
+              value={this.state.employeeId}
             >
               <option value="">Select an employee</option>
               {this.props.employees.map(e => (
@@ -91,13 +106,13 @@ export default class AnimalForm extends Component {
           </div>
           <button
             type="button"
-            onClick={this.constructNewAnimal}
+            onClick={this.updateExistingAnimal}
             className="btn btn-primary"
           >
             Submit
-          </button>
+            </button>
         </form>
-      </React.Fragment >
+      </React.Fragment>
     );
   }
 }

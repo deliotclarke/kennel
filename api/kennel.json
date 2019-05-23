@@ -16,24 +16,14 @@
       "phoneNumber": "615-996-0985"
     },
     {
-      "id": 5,
-      "name": "Blaise Roberts",
-      "phoneNumber": "615-996-0985"
+      "name": "Tom Humberbatchner",
+      "phoneNumber": "656-200-4206",
+      "id": 5
     },
     {
-      "id": 6,
-      "name": "Blaise Roberts",
-      "phoneNumber": "615-996-0985"
-    },
-    {
-      "id": 7,
-      "name": "Blaise Roberts",
-      "phoneNumber": "615-996-0985"
-    },
-    {
-      "id": 8,
-      "name": "Blaise Roberts",
-      "phoneNumber": "615-996-0985"
+      "name": "Paul Fuques",
+      "phoneNumber": "555-who-cares",
+      "id": 6
     }
   ],
   "animals": [
@@ -47,13 +37,13 @@
       "id": 2,
       "name": "Stephen",
       "breed": "Chihuahua",
-      "nickname": "honcho"
+      "nickname": "Honcho"
     },
     {
       "id": 3,
       "name": "Charles Barkley",
       "breed": "Golden Retriever",
-      "nickname": "Scottie Pippen"
+      "employeeId": 6
     },
     {
       "id": 4,
@@ -80,13 +70,6 @@
       "employeeId": 1,
       "nickname": "Todd the Toad",
       "id": 10
-    },
-    {
-      "name": "John",
-      "breed": "Fish",
-      "employeeId": 3,
-      "nickname": "Fish",
-      "id": 11
     },
     {
       "name": "Jon Snow",
@@ -126,6 +109,11 @@
       "id": 6,
       "name": "Angela Lee",
       "phoneNumber": "816-909-8783"
+    },
+    {
+      "name": "Shelly Arnold",
+      "phoneNumber": "606-227-0897",
+      "id": 7
     }
   ],
   "locations": [

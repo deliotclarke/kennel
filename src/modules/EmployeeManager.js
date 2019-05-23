@@ -14,5 +14,14 @@ export default {
         "content-type": "application/json"
       }
     }).then(e => e.json())
+  },
+  addEmployee(employeeObj) {
+    return fetch(`${remoteURL}/employees`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(employeeObj)
+    }).then(e => e.json())
   }
 }
