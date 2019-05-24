@@ -24,6 +24,11 @@ export default class Animal extends Component {
                 .filter(emply => emply.id === this.props.animal.employeeId)
                 .map(emply => emply.name)
             } </h6>
+            <h6 className="card-title">Owner: {
+              this.props.owners
+                .filter(owner => owner.id === this.props.animal.ownerId)
+                .map(owner => owner.name)
+            } </h6>
             <button onClick={
               () => {
                 this.setState(
@@ -33,7 +38,8 @@ export default class Animal extends Component {
               }
             }
               disabled={this.state.saveDisabled}
-              className="card-link btn-danger">Remove</button>
+              type="button"
+              className="card-link btn btn-danger">Remove</button>
           </div>
         </div>
       </section>

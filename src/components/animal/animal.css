@@ -12,8 +12,12 @@
     width: 10rem;
 }
 
+.space {
+    margin: 1rem;
+}
+
 .detail-card {
-    width: 25rem;
+    width: 25rem !important;
 }
 
 .card-title {
