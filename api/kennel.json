@@ -24,6 +24,11 @@
       "name": "Paul Fuques",
       "phoneNumber": "555-who-cares",
       "id": 6
+    },
+    {
+      "name": "Rebecca Butz",
+      "phoneNumber": "450-666-9013",
+      "id": 7
     }
   ],
   "animals": [
@@ -31,52 +36,81 @@
       "id": 1,
       "name": "Doug the Pug",
       "breed": "Pug",
-      "nickname": "The Dougie"
+      "nickname": "The Dougie",
+      "employeeId": 6,
+      "ownerId": 1
     },
     {
       "id": 2,
       "name": "Stephen",
       "breed": "Chihuahua",
-      "nickname": "Honcho"
+      "nickname": "Honcho",
+      "employeeId": 5,
+      "ownerId": 2
     },
     {
       "id": 3,
       "name": "Charles Barkley",
       "breed": "Golden Retriever",
-      "employeeId": 6
+      "nickname": "That Dog With A Bald Spot",
+      "employeeId": 6,
+      "ownerId": 3
     },
     {
       "id": 4,
       "name": "Berto",
       "breed": "The Best Pug",
-      "nickname": "Bito"
+      "nickname": "Bito",
+      "employeeId": 1,
+      "ownerId": 9
     },
     {
       "id": 6,
       "name": "Dave",
       "breed": "Pitbull",
-      "nickname": "Baby Boy"
+      "nickname": "Baby Boy",
+      "employeeId": 3,
+      "ownerId": 5
     },
     {
+      "id": 9,
       "name": "Bork",
       "breed": "Floofer",
-      "employeeId": 3,
       "nickname": "A boy",
-      "id": 9
+      "employeeId": 7,
+      "ownerId": 6
     },
     {
       "name": "Todd",
       "breed": "Toad",
       "employeeId": 1,
+      "ownerId": 6,
       "nickname": "Todd the Toad",
       "id": 10
     },
     {
+      "id": 12,
       "name": "Jon Snow",
       "breed": "Wolf",
-      "employeeId": 4,
       "nickname": "Ghost",
-      "id": 12
+      "employeeId": 4,
+      "ownerId": 5
+    },
+    {
+      "name": "Cavy",
+      "breed": "Prison Dog",
+      "employeeId": 6,
+      "nickname": "Cavy Baby",
+      "id": 13,
+      "ownerId": 7
+    },
+    {
+      "name": "Cerin",
+      "breed": "Street Dog",
+      "employeeId": 6,
+      "nickname": "ThugLife",
+      "id": 14,
+      "ownerId": 7
     }
   ],
   "owners": [
@@ -114,6 +148,16 @@
       "name": "Shelly Arnold",
       "phoneNumber": "606-227-0897",
       "id": 7
+    },
+    {
+      "name": "Tom Kushner",
+      "phoneNumber": "578-909-8768",
+      "id": 8
+    },
+    {
+      "name": "Courtney O'Shea",
+      "phoneNumber": "650-333-8989",
+      "id": 9
     }
   ],
   "locations": [

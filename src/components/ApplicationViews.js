@@ -12,6 +12,7 @@ import SearchList from './search/SearchList'
 
 import AnimalDetail from './animal/AnimalDetail'
 import EmployeeDetail from './employee/EmployeeDetail'
+import OwnerDetail from './owner/OwnerDetail'
 
 import AnimalForm from './animal/AnimalForm'
 import AnimalEditForm from './animal/AnimalEditForm'
@@ -148,7 +149,8 @@ class ApplicationViews extends Component {
         <Route exact path="/employees" render={props => {
           if (this.isAuthenticated()) {
             return <EmployeeList deleteEmployee={this.deleteEmployee}
-              employees={this.state.employees} />
+              employees={this.state.employees}
+              animals={this.state.animals} {...props} />
           } else {
             return <Redirect to="/login" />
           }
@@ -172,7 +174,9 @@ class ApplicationViews extends Component {
             animal = { id: 404, name: "404", breed: "dog not found" }
           }
           return <AnimalDetail animal={animal}
-            deleteAnimal={this.deleteAnimal} />
+            deleteAnimal={this.deleteAnimal}
+            employees={this.state.employees}
+            owners={this.state.owners} />
         }} />
         <Route path="/animals/new" render={(props) => {
 
@@ -195,6 +199,8 @@ class ApplicationViews extends Component {
             employee = { id: 404, name: "404", phoneNumber: "employee not found" }
           }
           return <EmployeeDetail employee={employee}
+            {...props}
+            animals={this.state.animals}
             deleteEmployee={this.deleteEmployee} />
         }}
         />
@@ -204,6 +210,22 @@ class ApplicationViews extends Component {
         }} />
         <Route exact path="/owners" render={(props) => {
           return <OwnerList {...props} owners={this.state.owners} ownerDelete={this.deleteOwner} />
+        }} />
+        < Route exact path="/owners/:ownerId(\d+)" render={(props) => {
+
+          //find the animal with the id of the route paramerter
+          let owner = this.state.owners.find(owner =>
+            owner.id === parseInt(props.match.params.ownerId)
+          )
+
+          //if the animal wasn't found create a default one
+          if (!owner) {
+            owner = { id: 404, name: "404", breed: "owner not found" }
+          }
+          return <OwnerDetail owner={owner}
+            {...props}
+            deleteOwner={this.deleteOwner}
+            animals={this.state.animals} />
         }} />
         <Route path="/owners/new" render={(props) => {
 
