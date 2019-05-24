@@ -22,27 +22,28 @@ export default class AnimalItem extends Component {
     return (
       <div className="animalItem card">
         <div className="card-body">
-          <h5 className="card-title">
+          <div className="card-title">
             <img src={DogIcon} alt="dog icon" className="icon--dog" />
-            {this.props.animal.name}
+            <h5>{this.props.animal.name}</h5>
 
+            <div className="button-div flex-d flex-row">
+              <button
+                //delete button
+                onClick={this.handleClick}
+                className="card-link btn-warning flex-item"
+                disabled={this.state.saveDisabled}>Adopted</button>
+              <Link className="card-link flex-item m-1" to={`/animals/${this.props.animal.id}`}>Details</Link>
 
-            <button
-              //delete button
-              onClick={this.handleClick}
-              className="card-link btn-warning"
-              disabled={this.state.saveDisabled}>Adopted</button>
-            <Link className="card-link" to={`/animals/${this.props.animal.id}`}>Details</Link>
-
-            <button
-              type="button"
-              className="btn btn-success"
-              onClick={() => {
-                this.props.history.push(`/animals/${this.props.animal.id}/edit`);
-              }}
-            >
-              Edit
-</button></h5>
+              <button
+                type="button flex-item"
+                className="btn btn-success"
+                onClick={() => {
+                  this.props.history.push(`/animals/${this.props.animal.id}/edit`);
+                }}
+              >
+                Edit
+</button></div>
+          </div>
         </div>
       </div>
     )
