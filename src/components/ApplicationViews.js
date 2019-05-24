@@ -148,7 +148,8 @@ class ApplicationViews extends Component {
         <Route exact path="/employees" render={props => {
           if (this.isAuthenticated()) {
             return <EmployeeList deleteEmployee={this.deleteEmployee}
-              employees={this.state.employees} />
+              employees={this.state.employees}
+              animals={this.state.animals} {...props} />
           } else {
             return <Redirect to="/login" />
           }
@@ -172,7 +173,8 @@ class ApplicationViews extends Component {
             animal = { id: 404, name: "404", breed: "dog not found" }
           }
           return <AnimalDetail animal={animal}
-            deleteAnimal={this.deleteAnimal} />
+            deleteAnimal={this.deleteAnimal}
+            employees={this.state.employees} />
         }} />
         <Route path="/animals/new" render={(props) => {
 

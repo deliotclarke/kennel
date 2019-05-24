@@ -8,14 +8,11 @@ export default class AnimalItem extends Component {
     saveDisabled: false
   }
 
-  handleClick = (event) => {
-    console.log("click", event)
-
-    this.setState({
-      saveDisabled: true
-    })
-
-    this.props.deleteAnimal(this.props.animal.id)
+  handleClick = () => {
+    this.setState(
+      { saveDisabled: true },
+      this.props.deleteAnimal(this.props.animal.id)
+    )
   }
 
   render() {

@@ -24,6 +24,11 @@
       "name": "Paul Fuques",
       "phoneNumber": "555-who-cares",
       "id": 6
+    },
+    {
+      "name": "Rebecca Butz",
+      "phoneNumber": "450-666-9013",
+      "id": 7
     }
   ],
   "animals": [
@@ -67,7 +72,7 @@
       "name": "Bork",
       "breed": "Floofer",
       "nickname": "A boy",
-      "employeeId": 3
+      "employeeId": 7
     },
     {
       "name": "Todd",
