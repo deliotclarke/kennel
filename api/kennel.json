@@ -31,38 +31,43 @@
       "id": 1,
       "name": "Doug the Pug",
       "breed": "Pug",
-      "nickname": "The Dougie"
+      "nickname": "The Dougie",
+      "employeeId": 6
     },
     {
       "id": 2,
       "name": "Stephen",
       "breed": "Chihuahua",
-      "nickname": "Honcho"
+      "nickname": "Honcho",
+      "employeeId": 5
     },
     {
       "id": 3,
       "name": "Charles Barkley",
       "breed": "Golden Retriever",
+      "nickname": "That Dog With A Bald Spot",
       "employeeId": 6
     },
     {
       "id": 4,
       "name": "Berto",
       "breed": "The Best Pug",
-      "nickname": "Bito"
+      "nickname": "Bito",
+      "employeeId": 1
     },
     {
       "id": 6,
       "name": "Dave",
       "breed": "Pitbull",
-      "nickname": "Baby Boy"
+      "nickname": "Baby Boy",
+      "employeeId": 3
     },
     {
+      "id": 9,
       "name": "Bork",
       "breed": "Floofer",
-      "employeeId": 3,
       "nickname": "A boy",
-      "id": 9
+      "employeeId": 3
     },
     {
       "name": "Todd",
@@ -72,11 +77,11 @@
       "id": 10
     },
     {
+      "id": 12,
       "name": "Jon Snow",
       "breed": "Wolf",
-      "employeeId": 4,
       "nickname": "Ghost",
-      "id": 12
+      "employeeId": 4
     }
   ],
   "owners": [
@@ -114,6 +119,11 @@
       "name": "Shelly Arnold",
       "phoneNumber": "606-227-0897",
       "id": 7
+    },
+    {
+      "name": "Tom Kushner",
+      "phoneNumber": "578-909-8768",
+      "id": 8
     }
   ],
   "locations": [
